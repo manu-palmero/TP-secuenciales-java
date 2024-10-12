@@ -23,7 +23,7 @@ public class Ejercicio_3 {
         };
         String condicion = (String) JOptionPane.showInputDialog(
                 null,
-                "Seleccione qué nivel de condición física tiene:",
+                "Seleccione el nivel de condición física que tiene:",
                 "Condición Física",
                 JOptionPane.QUESTION_MESSAGE,
                 null,
