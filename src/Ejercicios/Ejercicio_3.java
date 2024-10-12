@@ -16,6 +16,7 @@ public class Ejercicio_3 {
     }
 
     public static void ej3() {
+        System.out.println("Ejercicio 3");
         String[] condiciones = {
                 "Principiante",
                 "Intermedio",
