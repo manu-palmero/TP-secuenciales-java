@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 /*
 Ejercicio 6: Generador de Planes de Estudio
@@ -11,11 +11,10 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class Ejercicio_6 {
-    public static void main(String[] args) {
-        ej6();
-    }
-
-    public static void ej6() {
+    public void ej6() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        System.out.println("Ejercicio 6");
         Random rand = new Random();
         String[] materias = {
                 "Matemática",
@@ -34,16 +33,15 @@ public class Ejercicio_6 {
                 "Domingo",
         };
         Map<String, String[][]> plan = new HashMap<>();
-        Scanner sc = new Scanner(System.in);
+        double horas = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese la cantidad de horas que puede estudar a la semana: ", "Generador de plan de estudios", JOptionPane.QUESTION_MESSAGE));
         System.out.println("Generador de plan de estudios");
-        System.out.print("Ingrese la cantidad de horas que puede estudar a la semana: ");
-        double horas = sc.nextDouble();
 
         for (String dia : dias) {
-            System.out.println("\n" + dia);
+            panel.add(new JLabel(" "));
+            panel.add(new JLabel("\n" + dia));
             double h = horas / materias.length / 5.6;
             if (dia.equals("Domingo")) {
-                System.out.println("Descanso");
+                panel.add(new JLabel("Descanso"));
                 continue;
             }
             if (dia.equals("Sábado")) {
@@ -56,14 +54,15 @@ public class Ejercicio_6 {
                 } while (l[0] == l[1] || l[1] == l[2] || l[2] == l[0]);
 
                 for (int j : l) {
-                    System.out.println(materias[j] + ": " + decimal_a_hora(h));
+                    panel.add(new JLabel(materias[j] + ": " + decimal_a_hora(h)));
                 }
                 continue;
             }
             for (String materia : materias) {
-                System.out.println(materia + ": " + decimal_a_hora(h));
+                panel.add(new JLabel(materia + ": " + decimal_a_hora(h) + "\n"));
             }
         }
+        JOptionPane.showMessageDialog(null, panel);
     }
 
     public static String decimal_a_hora(double horas) {

@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 import javax.swing.*;
 
@@ -11,11 +11,7 @@ duraciones.
 
 
 public class Ejercicio_3 {
-    public static void main(String[] args) {
-        ej3();
-    }
-
-    public static void ej3() {
+    public void ej3() {
         System.out.println("Ejercicio 3");
         String programa = "";
         String[] condiciones = {

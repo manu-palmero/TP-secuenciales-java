@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 /*
 Ejercicio 5: Calculadora de Costo de Viaje
@@ -10,11 +10,8 @@ calcule e imprima el costo total del viaje.
 import javax.swing.*;
 
 public class Ejercicio_5 {
-    public static void main(String[] args) {
-        ej5();
-    }
-
-    public static void ej5() {
+    public void ej5() {
+        System.out.println("Ejercicio 5");
         double costoTotal, respuesta;
         boolean vacio;
 
@@ -33,7 +30,7 @@ public class Ejercicio_5 {
         ventana.add(consumoCombustible);
 
         do {
-            respuesta = JOptionPane.showConfirmDialog(null, ventana, "", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+            respuesta = JOptionPane.showConfirmDialog(null, ventana, "", JOptionPane.OK_OPTION, JOptionPane.PLAIN_MESSAGE);
 
 
             if (precioCombustible.getText().isEmpty()) {

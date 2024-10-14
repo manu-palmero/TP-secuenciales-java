@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 import javax.swing.JOptionPane;
 
@@ -9,11 +9,7 @@ import javax.swing.JOptionPane;
  */
 
 public class Ejercicio_1 {
-    public static void main(String[] args) {
-        ej1();
-    }
-
-    public static void ej1() {
+    public void ej1() {
         System.out.println("Ejercicio 1");
         String date;
         String[] date_arr;
@@ -111,7 +107,7 @@ public class Ejercicio_1 {
             case "Sagitario" -> ("La aventura y la independencia son tus señas de identidad.");
             case "Capricornio" -> ("Eres ambicioso y disciplinado.");
             case "Acuario" -> ("Tu pensamiento innovador y humanitario te destaca.");
-            case "Piscis" -> ("Eres muy sensible y tienes una gran imaginación.");
+            case "Picsis" -> ("Eres muy sensible y tienes una gran imaginación.");
             default -> "";
         };
     }

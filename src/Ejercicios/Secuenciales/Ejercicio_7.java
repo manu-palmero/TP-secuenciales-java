@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 import javax.swing.*;
 import java.text.DecimalFormat;
@@ -12,11 +12,8 @@ vida, nivel de estrés, nivel de salud, etc.) en una escala del 1 al 10 y luego 
 
 
 public class Ejercicio_7 {
-    public static void main(String[] args) {
-        ej7();
-    }
-
-    public static void ej7() {
+    public void ej7() {
+        System.out.println("Ejercicio 7");
         JPanel panel = new JPanel(); // Crea un panel
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); // Establece que la disposición de los elementos de dicho panel sea vertical (eje Y)
 
@@ -40,7 +37,7 @@ public class Ejercicio_7 {
         int indiceEstres = nums[estres.getSelectedIndex()];
         int indiceSalud = nums[salud.getSelectedIndex()];
 
-        double[] indice = {indiceSatisfaccion, indiceEstres, indiceSalud};
+        double[] indice = {indiceSatisfaccion, 11-indiceEstres, indiceSalud};
 
         DecimalFormat df = new DecimalFormat("#.##");
         String indiceTotal = df.format(promedio(indice));
@@ -50,7 +47,6 @@ public class Ejercicio_7 {
         } else {
             JOptionPane.showMessageDialog(null, "Su índice de felicidad es " + indiceTotal, "Índice de felicidad calculado", JOptionPane.INFORMATION_MESSAGE);
         }
-
     }
 
     public static double promedio(double[] nums) {

@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 /*
 Ejercicio 4: Generador de Listas de Reproducción
@@ -9,11 +9,8 @@ genere una lista de reproducción con canciones sugeridas para ese estado de án
 import javax.swing.*;
 
 public class Ejercicio_4 {
-    public static void main(String[] args) {
-        ej4();
-    }
-
-    public static void ej4() {
+    public void ej4() {
+        System.out.println("Ejercicio 4");
         String[] estados = {
                 "feliz", "triste", "enérgico", "relajado"
         };

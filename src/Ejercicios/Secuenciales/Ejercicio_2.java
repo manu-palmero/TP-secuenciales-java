@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Secuenciales;
 
 import javax.swing.JOptionPane;
 import java.text.DecimalFormat;
@@ -14,11 +14,7 @@ import java.util.Map;
  * */
 
 public class Ejercicio_2 {
-    public static void main(String[] args) {
-        ej2();
-    }
-
-    public static void ej2() {
+    public void ej2() {
         System.out.println("Ejercicio 2");
         double peso, duracion, tasaEstandar, tasaAjustada;
         String ejercicio;
